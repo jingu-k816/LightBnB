@@ -38,7 +38,7 @@ const getUserWithId = function(id) {
   const queryId = [id];
 
   return pool
-  .query(queryString, queryEmail)
+  .query(queryString, queryId)
   .then(result => result.rows[0] || null)
   .catch(error => error.message);
 }
